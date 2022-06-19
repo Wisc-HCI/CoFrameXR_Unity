@@ -1,0 +1,751 @@
+{
+  "tfs": [
+    {
+      "id": "thingType-98892a7c1c1911ecbe2600155d1a70a2",
+      "frame": "world",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "thingType-98892b3a1c1911ecbe2600155d1a70a2",
+      "frame": "world",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "thingType-98892bd01c1911ecbe2600155d1a70a2",
+      "frame": "world",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "thingType-98892ce81c1911ecbe2600155d1a70a2",
+      "frame": "world",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "thingType-98892d7e1c1911ecbe2600155d1a70a2",
+      "frame": "world",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "thingType-98892e001c1911ecbe2600155d1a70a2",
+      "frame": "world",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "robot-agent-988926121c1911eccbe2600155d1a70a2",
+      "frame": "pedestal",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0.38
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "gripper-robotiq",
+      "frame": "tool0",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "human-agent-ccbe2600155d1a70a2988926121c1911e",
+      "frame": "world",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "machine-ac5a063a-9ff9-4c0a-8fa6-81d3983f4a10",
+      "frame": "table",
+      "position": {
+        "x": -0.28,
+        "y": -0.04,
+        "z": 0.67
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "toolType-assembly-jig",
+      "frame": "world",
+      "position": {
+        "x": 0.2,
+        "y": 0.28,
+        "z": 0.14
+      },
+      "rotation": {
+        "w": -0.5,
+        "x": 0.5,
+        "y": -0.5,
+        "z": -0.5
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "machine-0c804bb3-f341-4b82-b9f0-e5aab536e4d7",
+      "frame": "world",
+      "position": {
+        "x": -0.85,
+        "y": -0.25,
+        "z": -0.75
+      },
+      "rotation": {
+        "w": 0.707,
+        "x": 0,
+        "y": 0,
+        "z": 0.707
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "machine-0914222f-03e0-4b4c-a8c4-03146867ba7b",
+      "frame": "world",
+      "position": {
+        "x": -0.85,
+        "y": -0.25,
+        "z": -0.75
+      },
+      "rotation": {
+        "w": 0.707,
+        "x": 0,
+        "y": 0,
+        "z": 0.707
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "machine-9133367a-f691-4d94-9764-50d9685db30a",
+      "frame": "world",
+      "position": {
+        "x": 0.85,
+        "y": -0.25,
+        "z": -0.75
+      },
+      "rotation": {
+        "w": 0.707,
+        "x": 0,
+        "y": 0,
+        "z": -0.707
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "machine-67d870e0-511d-4662-bf0d-8478f5e860f8",
+      "frame": "world",
+      "position": {
+        "x": 0.85,
+        "y": -0.25,
+        "z": -0.75
+      },
+      "rotation": {
+        "w": 0.707,
+        "x": 0,
+        "y": 0,
+        "z": -0.707
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "toolType-transport-jig",
+      "frame": "world",
+      "position": {
+        "x": 0.3,
+        "y": 0.28,
+        "z": 0.14
+      },
+      "rotation": {
+        "w": -0.5,
+        "x": 0.5,
+        "y": -0.5,
+        "z": -0.5
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "table",
+      "frame": "world",
+      "position": {
+        "x": 0,
+        "y": 0.36,
+        "z": -0.37
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "pedestal",
+      "frame": "world",
+      "position": {
+        "x": 0,
+        "y": -0.15,
+        "z": -0.38
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "base_link",
+      "frame": "robot-agent-988926121c1911eccbe2600155d1a70a2",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "shoulder_link",
+      "frame": "robot-agent-988926121c1911eccbe2600155d1a70a2",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0.1519
+      },
+      "rotation": {
+        "w": 0.7073882691671998,
+        "x": 0,
+        "y": 0,
+        "z": 0.706825181105366
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "upper_arm_link",
+      "frame": "robot-agent-988926121c1911eccbe2600155d1a70a2",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0.1519
+      },
+      "rotation": {
+        "w": 0.6171235595363384,
+        "x": 0.34568476425181466,
+        "y": 0.6168484772346602,
+        "z": 0.3451934416564831
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "forearm_link",
+      "frame": "robot-agent-988926121c1911eccbe2600155d1a70a2",
+      "position": {
+        "x": -0.00016541104688952424,
+        "y": -0.2077175339391811,
+        "z": 0.2792527433289551
+      },
+      "rotation": {
+        "w": 0.6805373835579399,
+        "x": -0.19147068957439534,
+        "y": 0.6806900727471037,
+        "z": -0.19201268051241213
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "wrist_1_link",
+      "frame": "robot-agent-988926121c1911eccbe2600155d1a70a2",
+      "position": {
+        "x": 0.1122731990583812,
+        "y": -0.09648879318889156,
+        "z": 0.4611423009970626
+      },
+      "rotation": {
+        "w": -0.16175266160023669,
+        "x": 0.6882284946623838,
+        "y": -0.16230076782720684,
+        "z": 0.6883575207424465
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "wrist_2_link",
+      "frame": "robot-agent-988926121c1911eccbe2600155d1a70a2",
+      "position": {
+        "x": 0.11233402832926202,
+        "y": -0.02010147568406853,
+        "z": 0.4992158682612048
+      },
+      "rotation": {
+        "w": 0.8502340176597257,
+        "x": -0.5262071308517355,
+        "y": 0.007893698999081546,
+        "z": 0.012077258426380468
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "wrist_3_link",
+      "frame": "robot-agent-988926121c1911eccbe2600155d1a70a2",
+      "position": {
+        "x": 0.10997166924094973,
+        "y": 0.016419404286072192,
+        "z": 0.4259474945536873
+      },
+      "rotation": {
+        "w": -0.2293867626786602,
+        "x": 0.968133140183572,
+        "y": 0.10011039739487268,
+        "z": 0.008822942793695915
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "flange",
+      "frame": "robot-agent-988926121c1911eccbe2600155d1a70a2",
+      "position": {
+        "x": 0.10997166924094973,
+        "y": 0.016419404286072192,
+        "z": 0.4259474945536873
+      },
+      "rotation": {
+        "x": 0.5531162241305279,
+        "y": 0.6444036787317046,
+        "z": -0.3149065186581716,
+        "w": 0.42383985884674
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "tool0",
+      "frame": "robot-agent-988926121c1911eccbe2600155d1a70a2",
+      "position": {
+        "x": 0.10997166924094973,
+        "y": 0.016419404286072192,
+        "z": 0.4259474945536873
+      },
+      "rotation": {
+        "x": 0.968133140183572,
+        "y": 0.1001103973948726,
+        "z": 0.008822942793695693,
+        "w": -0.2293867626786602
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "robotiq_85_base_link",
+      "frame": "gripper-robotiq",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "w": 0.5,
+        "x": 0.5,
+        "y": -0.5,
+        "z": 0.5
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "robotiq_85_left_knuckle_link",
+      "frame": "robotiq_85_base_link",
+      "position": {
+        "x": 0.05490451627,
+        "y": 0.03060114443,
+        "z": 0
+      },
+      "rotation": {
+        "w": 0,
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "robotiq_85_right_knuckle_link",
+      "frame": "robotiq_85_base_link",
+      "position": {
+        "x": 0.05490451627,
+        "y": -0.03060114443,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "robotiq_85_left_finger_link",
+      "frame": "robotiq_85_left_knuckle_link",
+      "position": {
+        "x": -0.00408552455,
+        "y": -0.03148604435,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "robotiq_85_right_finger_link",
+      "frame": "robotiq_85_right_knuckle_link",
+      "position": {
+        "x": -0.00408552455,
+        "y": -0.03148604435,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "robotiq_85_left_inner_knuckle_link",
+      "frame": "robotiq_85_base_link",
+      "position": {
+        "x": 0.06142,
+        "y": 0.0127,
+        "z": 0
+      },
+      "rotation": {
+        "w": 0,
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "robotiq_85_right_inner_knuckle_link",
+      "frame": "robotiq_85_base_link",
+      "position": {
+        "x": 0.06142,
+        "y": -0.0127,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "robotiq_85_left_finger_tip_link",
+      "frame": "robotiq_85_left_inner_knuckle_link",
+      "position": {
+        "x": 0.04303959807,
+        "y": -0.03759940821,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "id": "robotiq_85_right_finger_tip_link",
+      "frame": "robotiq_85_right_inner_knuckle_link",
+      "position": {
+        "x": 0.04303959807,
+        "y": -0.03759940821,
+        "z": 0
+      },
+      "rotation": {
+        "w": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "transformMode": "inactive",
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    }
+  ]
+}
