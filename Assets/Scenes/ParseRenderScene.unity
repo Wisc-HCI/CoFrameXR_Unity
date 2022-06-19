@@ -216,6 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474801276}
+  - component: {fileID: 474801277}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -238,6 +239,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &474801277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474801274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992dd3e904fd443ab2ba266f894da7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsJSON: {fileID: 4900000, guid: b8a3977e2e53046a98cd06cc8856a071, type: 3}
+  tfsJSON: {fileID: 4900000, guid: 27d4cd2cd5dfa4d409453b50f25c5a4d, type: 3}
+  currentItemList:
+    items: []
+  currentTfsList:
+    tfs: []
 --- !u!1 &919320402
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 919320404}
+  - component: {fileID: 919320405}
   m_Layer: 0
   m_Name: Loader
   m_TagString: Untagged
@@ -269,6 +289,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &919320405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919320402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f32cd033e7d48e3a27d11131a18962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parser: {fileID: 474801277}
+  meshList: []
 --- !u!1 &2009723524
 GameObject:
   m_ObjectHideFlags: 0

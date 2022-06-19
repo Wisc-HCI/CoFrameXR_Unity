@@ -6,32 +6,35 @@ public class DataParser : MonoBehaviour
 {
     public TextAsset itemsJSON;
     public TextAsset tfsJSON;
-    
-   
-   [System.Serializable]
-   public class ItemList {
-    public Item[] items;
-   }
-
-   [System.Serializable]
-   public class TfsList {
-    public Tf[] tfs;
-   }
-
-   public ItemList currentItemList = new ItemList();
-   public TfsList currentTfsList = new TfsList();
-
-//    public ItemList GetCurrentItemList(){
-//     return ItemList;
-//    }
-
-//     public TfsList GetCurrentTfsList(){
-//     return TfsList;
-//    }
 
 
-    
-    void Awake(){
+    [System.Serializable]
+    public class ItemList
+    {
+        public Item[] items;
+    }
+
+    [System.Serializable]
+    public class TfsList
+    {
+        public Tf[] tfs;
+    }
+
+    public ItemList currentItemList = new ItemList();
+    public TfsList currentTfsList = new TfsList();
+
+    //    public ItemList GetCurrentItemList(){
+    //     return ItemList;
+    //    }
+
+    //     public TfsList GetCurrentTfsList(){
+    //     return TfsList;
+    //    }
+
+
+
+    void Awake()
+    {
         currentItemList = JsonUtility.FromJson<ItemList>(itemsJSON.text);
         currentTfsList = JsonUtility.FromJson<TfsList>(tfsJSON.text);
     }
@@ -48,10 +51,10 @@ public class DataParser : MonoBehaviour
     [System.Serializable]
     public class Rotation
     {
-        public float w ;
-        public float x ;
-        public float y ;
-        public float z ;
+        public float w;
+        public float x;
+        public float y;
+        public float z;
     }
 
     [System.Serializable]
@@ -80,24 +83,24 @@ public class DataParser : MonoBehaviour
         public bool showName;
         public bool wireframe;
     }
-   
+
     [System.Serializable]
     public class Scale
     {
-        public int x ;
-        public int y ;
-        public int z ;
+        public int x;
+        public int y;
+        public int z;
     }
 
     [System.Serializable]
     public class Tf
     {
-        public string id ;
-        public string frame ;
-        public Position position ;
-        public Rotation rotation ;
-        public Scale scale ;
-        public string transformMode ;
+        public string id;
+        public string frame;
+        public Position position;
+        public Rotation rotation;
+        public Scale scale;
+        public string transformMode;
     }
 
 
