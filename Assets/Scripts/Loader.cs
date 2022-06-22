@@ -22,6 +22,7 @@ public class Loader : MonoBehaviour
 
     public DataParser parser;
     public List<GameObject> meshList = new List<GameObject>();
+    
 
     private const string Ur3Base = "Assets/Meshes/Ur3/visual/base.glb";
     private const string Ur3Forearm = "Assets/Meshes/Ur3/visual/forearm.glb";
@@ -50,78 +51,54 @@ public class Loader : MonoBehaviour
         {
             if (meshLookupTable.ContainsKey(item.shape))
             {
+                foreach (DataParser.Tf tf in parser.currentTfsList.tfs)
+                    {
+                        if (item.id == tf.id){
+
+                            GameObject tfGameObject = new GameObject(tf.id);
                 //GameObject mesh = ImportGLTF(meshLookupTable[item.shape]);
                 GameObject mesh = Importer.LoadFromFile(meshLookupTable[item.shape]);
+                mesh.transform.parent = tfGameObject.transform;
+
                 mesh.name = item.name;
-                //Debug.Log(mesh.name);
-                //Debug.Log("item"+new Vector3(item.position.x, item.position.y, item.position.z));
-                Vector3<FLU> rosPos = new Vector3<FLU>(item.position.x, item.position.y, item.position.z);
+                Vector3<FLU> rosTFPos = new Vector3<FLU>(tf.position.x, tf.position.y, tf.position.z);
 
-                //Debug.Log("item name and rosPos"+item.name + rosPos);
-                //Vector3<FLU> rosPos = tempPos.To<FLU>();
+               
+                Vector3<FLU> rosItemPos = new Vector3<FLU>(item.position.x, item.position.y, item.position.z);
 
-                Vector3 itemPos = new Vector3(item.position.x, item.position.y, item.position.z);
-                //Vector3 unityPos = rosPos.toUnity;
-                //unityPos = new Vector3((float)itemPos.z, (float)-itemPos.x, (float)itemPos.y);
-                //unityPos = new Vector3(-itemPos.x, itemPos.z, -itemPos.y);
-                //unityPos = new Vector3(-itemPos.y, itemPos.z, itemPos.x);
-                //unityPos = new Vector3(itemPos.x, itemPos.z, itemPos.y);
-    
-                //Vector3 unityPos = (Vector3)rosPos.To<RUF>();
+               
+                Vector3 unityTFPos = rosTFPos.toUnity;
+                Vector3 unityItemPos = rosItemPos.toUnity;
 
-                //Debug.Log("unityPos"+unityPos);
-                //mesh.GetComponent<Transform>().position = unityPos;
-
-                //Debug.Log("item Quat"+new Quaternion(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w));
-                Quaternion<FLU> rosQuat = new Quaternion<FLU>(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w);
+                Quaternion<FLU> rosTFQuat = new Quaternion<FLU>(tf.rotation.x, tf.rotation.y, tf.rotation.z, tf.rotation.w);
+                Quaternion<FLU> rosItemQuat = new Quaternion<FLU>(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w);
 
 
-                //Quaternion<FLU> rosQuat= tempQuat.To<FLU>();
-                //Debug.Log("rosQuat"+rosQuat);
-                Quaternion itemQuat = new Quaternion(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w);
-                //Quaternion unityQuat = rosQuat.toUnity;
-                //unityQuat = Quaternion.identity;
-                //unityQuat = new Quaternion((float)itemQuat.y, (float)-itemQuat.z, (float)-itemQuat.x, (float)itemQuat.w);
-                //unityQuat = new Quaternion(itemQuat.x, -itemQuat.z, itemQuat.y, itemQuat.w);
-                //unityQuat = (new Quaternion(-itemQuat.z, itemQuat.x, -itemQuat.y, itemQuat.w) * new Quaternion(0, 0, 0, 1));
-                //Quaternion unityQuat = ConvertToUnity(itemQuat);
-
-                //Quaternion itemQuat = new Quaternion(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w);
-                //Quaternion unityQuat = ((Quaternion<FLU>)itemQuat).toUnity;
-                //Quaternion unityQuat = (Quaternion)rosQuat.To<RUF>();
-                //Quaternion<FLU> tempQuat = unityQuat.To<FLU>();
-                //Debug.Log("unityQuat"+unityQuat);
-                //Debug.Log("tempQuat"+tempQuat);
-                // unityQuat.x *= 0.5;
-                // unityQuat.y +=
-                //mesh.GetComponent<Transform>().position = unityPos;
+               
+                Quaternion unityTFQuat = rosTFQuat.toUnity;
+                Quaternion unityItemQuat = rosItemQuat.toUnity;
+              
 
                 Vector3 itemScale = new Vector3(item.scale.x, item.scale.y, item.scale.z);
-                // Set the translation, rotation and scale parameters.
-                Matrix4x4 mesh_m = Matrix4x4.TRS(itemPos, itemQuat, itemScale);
-                (unityPos, unityQuat) = toLeftHanded(mesh_m);
-
-
-                mesh.transform.position = unityPos;
-                //mesh.GetComponent<Transform>().rotation = unityQuat;
-                mesh.transform.rotation = unityQuat;
-                Debug.Log(mesh.name+"\nROS : " + itemPos + " & " + itemQuat + "\nUnity : " + unityPos + " & " + unityQuat);
-                //new Quaternion(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w));
-
-                //Debug.Log(new Quaternion(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w));
+               
+                tfGameObject.transform.position = unityTFPos;
+                tfGameObject.transform.rotation = unityTFQuat;
+                mesh.transform.localRotation = unityItemQuat;
+               
+                mesh.transform.localPosition = unityItemPos;
+               
+                
+                //Debug.Log(mesh.name+"\nROS : " + itemPos + " & " + itemQuat + "\nUnity : " + unityPos + " & " + unityQuat);
+               
                 mesh.GetComponent<Transform>().localScale = itemScale;
-                //Matrix4x4 transformMatrix = Matrix4x4.TRS(mesh.GetComponent<Transform>().position,mesh.GetComponent<Transform>().rotation,mesh.GetComponent<Transform>().localScale);
-                //(Vector3 transformPos,Quaternion transformRot) = toRightHanded(transformMatrix);
-                //Debug.Log(transformPos);
-                //Debug.Log(transformRot);
-                // mesh.GetComponent<Transform>().position = transformPos;
-                // mesh.GetComponent<Transform>().rotation = transformRot;
-                //Debug.Log(mesh.name);
-                //Debug.Log(mesh.transform.position);
-                //Debug.Log(mesh.transform.rotation);
+               
                 meshList.Add(mesh);
+                        }
 
-                //Debug.Log(item.name);
+                    }
+                
+
+                
             }
         }
 
