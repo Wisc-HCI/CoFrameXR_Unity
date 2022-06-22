@@ -51,10 +51,10 @@ public class DataParser : MonoBehaviour
     [System.Serializable]
     public class Rotation
     {
-        public float w;
         public float x;
         public float y;
         public float z;
+        public float w;
     }
 
     [System.Serializable]
