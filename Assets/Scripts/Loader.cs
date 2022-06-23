@@ -52,108 +52,109 @@ public class Loader : MonoBehaviour
         meshLookupTable.Add("package://ur_description/meshes/ur3/visual/wrist1.dae", Ur3Wrist1);
         meshLookupTable.Add("package://ur_description/meshes/ur3/visual/wrist2.dae", Ur3Wrist2);
         meshLookupTable.Add("package://ur_description/meshes/ur3/visual/wrist3.dae", Ur3Wrist3);
-        //foreach (DataParser.Item item in parser.currentItemList.items)
-        //{
-        //    if (meshLookupTable.ContainsKey(item.shape))
-        //    {
-        //        foreach (DataParser.Tf tf in parser.currentTfsList.tfs)
-        //        {
-        //            if (item.id == tf.id)
-        //            {
+        foreach (DataParser.Item item in parser.currentItemList.items)
+        {
+            if (meshLookupTable.ContainsKey(item.shape))
+            {
+                foreach (DataParser.Tf tf in parser.currentTfsList.tfs)
+                {
+                    if (item.id == tf.id)
+                    {
 
-        //                GameObject tfGameObject = new GameObject(tf.id);
-        //                //GameObject mesh = ImportGLTF(meshLookupTable[item.shape]);
-        //                GameObject mesh = Importer.LoadFromFile(meshLookupTable[item.shape]);
-        //                //mesh.transform.parent = tfGameObject.transform;
+                        //GameObject tfGameObject = new GameObject(tf.id);
+                        GameObject tfGameObject = GameObject.Find(tf.id);
+                        //GameObject mesh = ImportGLTF(meshLookupTable[item.shape]);
+                        GameObject mesh = Importer.LoadFromFile(meshLookupTable[item.shape]);
+                        //mesh.transform.parent = tfGameObject.transform;
 
-        //                mesh.name = item.name;
-        //                //Vector3<FLU> rosTFPos = new Vector3<FLU>(tf.position.x, tf.position.y, tf.position.z);
-        //                Vector3 rosTFPos = new Vector3(tf.position.x, tf.position.y, tf.position.z);
-
-
-        //                //Vector3<FLU> rosItemPos = new Vector3<FLU>(item.position.x, item.position.y, item.position.z);
-        //                Vector3 rosItemPos = new Vector3(item.position.x, item.position.y, item.position.z);
+                        mesh.name = item.name;
+                        //Vector3<FLU> rosTFPos = new Vector3<FLU>(tf.position.x, tf.position.y, tf.position.z);
+                        Vector3 rosTFPos = new Vector3(tf.position.x, tf.position.y, tf.position.z);
 
 
-        //                //Vector3 unityTFPos = rosTFPos.toUnity;
-        //                Vector3 unityTFPos;
-        //                //Vector3 unityTFPos = Ros2UnityVec(rosTFPos);
-        //                //Vector3 unityItemPos = rosItemPos.toUnity;
-        //                Vector3 unityItemPos;
-        //                //Vector3 unityItemPos = Ros2UnityVec(rosItemPos);
-
-        //                //Quaternion<FLU> rosTFQuat = new Quaternion<FLU>(tf.rotation.w, tf.rotation.x, tf.rotation.y, tf.rotation.z);
-        //                Quaternion rosTFQuat = new Quaternion(tf.rotation.x, tf.rotation.y, tf.rotation.z, tf.rotation.w);
-        //                //Quaternion<FLU> rosItemQuat = new Quaternion<FLU>(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w);
-        //                Quaternion rosItemQuat = new Quaternion(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w);
+                        //Vector3<FLU> rosItemPos = new Vector3<FLU>(item.position.x, item.position.y, item.position.z);
+                        Vector3 rosItemPos = new Vector3(item.position.x, item.position.y, item.position.z);
 
 
+                        //Vector3 unityTFPos = rosTFPos.toUnity;
+                        Vector3 unityTFPos;
+                        //Vector3 unityTFPos = Ros2UnityVec(rosTFPos);
+                        //Vector3 unityItemPos = rosItemPos.toUnity;
+                        Vector3 unityItemPos;
+                        //Vector3 unityItemPos = Ros2UnityVec(rosItemPos);
 
-        //                //Quaternion unityTFQuat = rosTFQuat.toUnity;
-        //                //Quaternion unityItemQuat = rosItemQuat.toUnity;
-        //                Quaternion unityTFQuat;
-        //                //Quaternion unityTFQuat = Ros2UnityQuat(rosTFQuat);
-        //                Quaternion unityItemQuat;
-        //                //Quaternion unityItemQuat = Ros2UnityQuat(rosItemQuat);
-
-
-        //                Vector3 itemScale = new Vector3(item.scale.x, item.scale.y, item.scale.z);
-
-        //                // Set the translation, rotation and scale parameters.
-        //                Matrix4x4 item_m = Matrix4x4.TRS(rosItemPos, rosItemQuat, itemScale);
-        //                (unityItemPos, unityItemQuat) = toLeftHanded(item_m);
-        //                Matrix4x4 rosTF_m = Matrix4x4.TRS(rosTFPos, rosTFQuat, itemScale);
-        //                (unityTFPos, unityTFQuat) = toLeftHanded(rosTF_m);
-
-        //                mesh.transform.parent = tfGameObject.transform;
-
-        //                tfGameObject.transform.position = unityTFPos;
-        //                tfGameObject.transform.rotation = unityTFQuat;
-
-
-        //                //tfGameObject.transform.position = RosToUnityPositionAxisConversion(rosTFPos);
-        //                //tfGameObject.transform.rotation = RosToUnityQuaternionConversion(rosTFQuat);
-
-        //                //mesh.transform.parent = tfGameObject.transform;
-        //                //Vector3 localPos = mesh.transform.localPosition;
-        //                //Quaternion localQuat = mesh.transform.localRotation;
-        //                //mesh.transform.position = mesh.transform.parent.position + localPos;
-        //                //mesh.transform.rotation = mesh.transform.parent.rotation * localQuat;
-        //                mesh.transform.localPosition = unityItemPos;
-        //                mesh.transform.localRotation = unityItemQuat;
-
-        //                //mesh.transform.localPosition = RosToUnityPositionAxisConversion(rosItemPos);
-        //                //mesh.transform.localRotation = RosToUnityQuaternionConversion(rosItemQuat);
-
-        //                //mesh.transform.position = unityItemPos;
-        //                //mesh.transform.rotation = unityItemQuat;
-
-
-        //                //Debug.Log(mesh.name+"\nROS : " + itemPos + " & " + itemQuat + "\nUnity : " + unityPos + " & " + unityQuat);
-
-        //                mesh.GetComponent<Transform>().localScale = itemScale;
-
-        //                meshList.Add(mesh);
-        //                //// save mesh GameObject as Prefabs
-        //                //string localPath = "Assets/Prefabs/" + mesh.name + ".prefab";
-        //                //// Make sure the file name is unique, in case an existing Prefab has the same name.
-        //                //localPath = AssetDatabase.GenerateUniqueAssetPath(localPath);
-
-        //                //// Create the new Prefab and log whether Prefab was saved successfully.
-        //                //bool prefabSuccess;
-        //                //PrefabUtility.SaveAsPrefabAsset(mesh, localPath, out prefabSuccess);
-        //                //if (prefabSuccess == true)
-        //                //    Debug.Log("Prefab was saved successfully");
-        //                //else
-        //                //    Debug.Log("Prefab failed to save" + prefabSuccess);
-        //            }
-
-        //        }
+                        //Quaternion<FLU> rosTFQuat = new Quaternion<FLU>(tf.rotation.w, tf.rotation.x, tf.rotation.y, tf.rotation.z);
+                        Quaternion rosTFQuat = new Quaternion(tf.rotation.x, tf.rotation.y, tf.rotation.z, tf.rotation.w);
+                        //Quaternion<FLU> rosItemQuat = new Quaternion<FLU>(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w);
+                        Quaternion rosItemQuat = new Quaternion(item.rotation.x, item.rotation.y, item.rotation.z, item.rotation.w);
 
 
 
-        //    }
-        //}
+                        //Quaternion unityTFQuat = rosTFQuat.toUnity;
+                        //Quaternion unityItemQuat = rosItemQuat.toUnity;
+                        Quaternion unityTFQuat;
+                        //Quaternion unityTFQuat = Ros2UnityQuat(rosTFQuat);
+                        Quaternion unityItemQuat;
+                        //Quaternion unityItemQuat = Ros2UnityQuat(rosItemQuat);
+
+
+                        Vector3 itemScale = new Vector3(item.scale.x, item.scale.y, item.scale.z);
+
+                        // Set the translation, rotation and scale parameters.
+                        Matrix4x4 item_m = Matrix4x4.TRS(rosItemPos, rosItemQuat, itemScale);
+                        (unityItemPos, unityItemQuat) = toLeftHanded(item_m);
+                        Matrix4x4 rosTF_m = Matrix4x4.TRS(rosTFPos, rosTFQuat, itemScale);
+                        (unityTFPos, unityTFQuat) = toLeftHanded(rosTF_m);
+
+                        mesh.transform.parent = tfGameObject.transform;
+
+                        tfGameObject.transform.position = unityTFPos;
+                        tfGameObject.transform.rotation = unityTFQuat;
+
+
+                        //tfGameObject.transform.position = RosToUnityPositionAxisConversion(rosTFPos);
+                        //tfGameObject.transform.rotation = RosToUnityQuaternionConversion(rosTFQuat);
+
+                        //mesh.transform.parent = tfGameObject.transform;
+                        //Vector3 localPos = mesh.transform.localPosition;
+                        //Quaternion localQuat = mesh.transform.localRotation;
+                        //mesh.transform.position = mesh.transform.parent.position + localPos;
+                        //mesh.transform.rotation = mesh.transform.parent.rotation * localQuat;
+                        mesh.transform.localPosition = unityItemPos;
+                        mesh.transform.localRotation = unityItemQuat;
+
+                        //mesh.transform.localPosition = RosToUnityPositionAxisConversion(rosItemPos);
+                        //mesh.transform.localRotation = RosToUnityQuaternionConversion(rosItemQuat);
+
+                        //mesh.transform.position = unityItemPos;
+                        //mesh.transform.rotation = unityItemQuat;
+
+
+                        //Debug.Log(mesh.name+"\nROS : " + itemPos + " & " + itemQuat + "\nUnity : " + unityPos + " & " + unityQuat);
+
+                        mesh.GetComponent<Transform>().localScale = itemScale;
+
+                        meshList.Add(mesh);
+                        //// save mesh GameObject as Prefabs
+                        //string localPath = "Assets/Prefabs/" + mesh.name + ".prefab";
+                        //// Make sure the file name is unique, in case an existing Prefab has the same name.
+                        //localPath = AssetDatabase.GenerateUniqueAssetPath(localPath);
+
+                        //// Create the new Prefab and log whether Prefab was saved successfully.
+                        //bool prefabSuccess;
+                        //PrefabUtility.SaveAsPrefabAsset(mesh, localPath, out prefabSuccess);
+                        //if (prefabSuccess == true)
+                        //    Debug.Log("Prefab was saved successfully");
+                        //else
+                        //    Debug.Log("Prefab failed to save" + prefabSuccess);
+                    }
+
+                }
+
+
+
+            }
+        }
 
 
     }
