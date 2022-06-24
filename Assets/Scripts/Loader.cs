@@ -119,8 +119,6 @@ public class Loader : MonoBehaviour
                         mesh.transform.localPosition = rosItemPos;
                         mesh.transform.localRotation = rosItemQuat;
 
-                        
-
                         mesh.GetComponent<Transform>().localScale = itemScale;
 
                         meshList.Add(mesh);
@@ -133,7 +131,9 @@ public class Loader : MonoBehaviour
 
             }
         }
-        
+
+        // rotate root game objects in the tree by -90 degress in x axis
+        RotateRoot();
 
     }
 
@@ -255,17 +255,13 @@ public class Loader : MonoBehaviour
             Tree.Add(tfGameObject);
 
         }
-
-        
-
-
         // assign children to root game objects in Tree
         foreach (DataParser.Tf tf in parser.currentTfsList.tfs)
         {
             // should be root
             if (tf.frame == "world")
             {
-
+ 
             }
             // at least nested, not root
             else
@@ -289,4 +285,19 @@ public class Loader : MonoBehaviour
         }
 
     }
+
+    void RotateRoot()
+    { 
+        foreach (DataParser.Tf tf in parser.currentTfsList.tfs)
+        {
+            // should be root
+            if (tf.frame == "world")
+            {
+                //Debug.Log(tf.id + " root");
+                GameObject.Find(tf.id).transform.Rotate(-90, 0, 0);
+            }
+        }
+
+    }
+
 }
