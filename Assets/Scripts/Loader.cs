@@ -107,46 +107,24 @@ public class Loader : MonoBehaviour
                         (unityTFPos, unityTFQuat) = toLeftHanded(rosTF_m);
 
                         mesh.transform.parent = tfGameObject.transform;
+                       
 
-                        tfGameObject.transform.position = unityTFPos;
-                        tfGameObject.transform.rotation = unityTFQuat;
-
-
-                        //tfGameObject.transform.position = RosToUnityPositionAxisConversion(rosTFPos);
-                        //tfGameObject.transform.rotation = RosToUnityQuaternionConversion(rosTFQuat);
-
-                        //mesh.transform.parent = tfGameObject.transform;
-                        //Vector3 localPos = mesh.transform.localPosition;
-                        //Quaternion localQuat = mesh.transform.localRotation;
-                        //mesh.transform.position = mesh.transform.parent.position + localPos;
-                        //mesh.transform.rotation = mesh.transform.parent.rotation * localQuat;
-                        mesh.transform.localPosition = unityItemPos;
-                        mesh.transform.localRotation = unityItemQuat;
-
-                        //mesh.transform.localPosition = RosToUnityPositionAxisConversion(rosItemPos);
-                        //mesh.transform.localRotation = RosToUnityQuaternionConversion(rosItemQuat);
-
-                        //mesh.transform.position = unityItemPos;
-                        //mesh.transform.rotation = unityItemQuat;
+                        tfGameObject.transform.position = rosTFPos;
+                        tfGameObject.transform.rotation = rosTFQuat;
+                         
+                         
 
 
-                        //Debug.Log(mesh.name+"\nROS : " + itemPos + " & " + itemQuat + "\nUnity : " + unityPos + " & " + unityQuat);
+                        
+                        mesh.transform.localPosition = rosItemPos;
+                        mesh.transform.localRotation = rosItemQuat;
+
+                        
 
                         mesh.GetComponent<Transform>().localScale = itemScale;
 
                         meshList.Add(mesh);
-                        //// save mesh GameObject as Prefabs
-                        //string localPath = "Assets/Prefabs/" + mesh.name + ".prefab";
-                        //// Make sure the file name is unique, in case an existing Prefab has the same name.
-                        //localPath = AssetDatabase.GenerateUniqueAssetPath(localPath);
-
-                        //// Create the new Prefab and log whether Prefab was saved successfully.
-                        //bool prefabSuccess;
-                        //PrefabUtility.SaveAsPrefabAsset(mesh, localPath, out prefabSuccess);
-                        //if (prefabSuccess == true)
-                        //    Debug.Log("Prefab was saved successfully");
-                        //else
-                        //    Debug.Log("Prefab failed to save" + prefabSuccess);
+                       
                     }
 
                 }
@@ -155,7 +133,7 @@ public class Loader : MonoBehaviour
 
             }
         }
-
+        
 
     }
 
@@ -278,6 +256,8 @@ public class Loader : MonoBehaviour
 
         }
 
+        
+
 
         // assign children to root game objects in Tree
         foreach (DataParser.Tf tf in parser.currentTfsList.tfs)
@@ -290,7 +270,7 @@ public class Loader : MonoBehaviour
             // at least nested, not root
             else
             {
-                //Debug.Log(tf.id);
+                Debug.Log(tf.id);
                 for (int i = 0; i < Tree.Count; i++)
                 {
                     // return your game object if found, otherwise return null
@@ -307,5 +287,6 @@ public class Loader : MonoBehaviour
 
             }
         }
+
     }
 }
