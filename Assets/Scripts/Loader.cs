@@ -32,7 +32,8 @@ public class Loader : MonoBehaviour
     private const string Ur3Upperarm = "Assets/Meshes/Ur3/visual/upperarm.glb";
     private const string Ur3Wrist1 = "Assets/Meshes/Ur3/visual/wrist1.glb";
     private const string Ur3Wrist2 = "Assets/Meshes/Ur3/visual/wrist2.glb";
-    private const string Ur3Wrist3 = "Assets/Meshes/Ur3/visual/wrist3.glb";
+    //private const string Ur3Wrist3 = "Assets/Meshes/Ur3/visual/wrist3.glb";
+    private const string Ur3Wrist3 = "Assets/Meshes/Ur3/visual/newWrist3.glb";
 
     private Quaternion unityQuat;
     private Vector3 unityPos;
