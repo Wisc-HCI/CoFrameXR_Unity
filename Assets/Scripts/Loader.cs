@@ -295,6 +295,7 @@ public class Loader : MonoBehaviour
             {
                 //Debug.Log(tf.id + " root");
                 GameObject.Find(tf.id).transform.Rotate(-90, 0, 0);
+                GameObject.Find(tf.id).transform.localScale = new Vector3(-1,1,1);
             }
         }
 
